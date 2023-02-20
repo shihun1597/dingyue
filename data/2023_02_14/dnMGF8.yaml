@@ -1,9 +1,9 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2023-02-14 18:07:53
-# 使用模版：shihun
-# 节点数量：1
+# 创建时间：2023-02-20 16:34:05
+# 使用模版：个人自定义模板
+# 节点数量：10
 ####################################
 port: 7890
 socks-port: 7891
@@ -13,7 +13,16 @@ log-level: info
 external-controller: 127.0.0.1:9090
 
 proxies:
-  - {"name":"hysteria-ygkkk","type":"hysteria","server":"89.117.88.104","port":29804,"sni":"www.bing.com","skip-cert-verify":false,"alpn":["h3"],"protocol":"wechat-video","auth_str":"959715","up":10,"down":50}
+  - {"name":"vless_1","type":"vless","server":"vl.346492.xyz","port":443,"uuid":"15377cff-72be-45a8-d3ca-7abefa54da99","tls":true,"servername":"vl.346492.xyz","network":"ws","ws-opts":{"path":"/date","headers":{"host":"vl.346492.xyz"}}}
+  - {"name":"vless-clone","type":"vless","server":"172.104.121.53","port":443,"uuid":"15377cff-72be-45a8-d3ca-7abefa54da99","tls":true,"servername":"vl.346492.xyz","network":"ws","ws-opts":{"path":"/date","headers":{"host":"vl.346492.xyz"}}}
+  - {"name":"vless-clone-clone","type":"vless","server":"172.105.192.237","port":443,"uuid":"15377cff-72be-45a8-d3ca-7abefa54da99","tls":true,"servername":"vl.346492.xyz","network":"ws","ws-opts":{"path":"/date","headers":{"host":"vl.346492.xyz"}}}
+  - {"name":"vless-clone-clone-clone","type":"vless","server":"110.238.110.254","port":443,"uuid":"15377cff-72be-45a8-d3ca-7abefa54da99","tls":true,"servername":"vl.346492.xyz","network":"ws","ws-opts":{"path":"/date","headers":{"host":"vl.346492.xyz"}}}
+  - {"name":"vless_2","type":"vless","server":"37.120.154.103","port":443,"uuid":"15377cff-72be-45a8-d3ca-7abefa54da99","tls":true,"servername":"vl.346492.xyz","network":"ws","ws-opts":{"path":"/date","headers":{"host":"vl.346492.xyz"}}}
+  - {"name":"vless_3","type":"vless","server":"178.128.126.74","port":443,"uuid":"15377cff-72be-45a8-d3ca-7abefa54da99","tls":true,"servername":"vl.346492.xyz","network":"ws","ws-opts":{"path":"/date","headers":{"host":"vl.346492.xyz"}}}
+  - {"name":"vless_4","type":"vless","server":"123.58.201.213","port":443,"uuid":"15377cff-72be-45a8-d3ca-7abefa54da99","tls":true,"servername":"vl.346492.xyz","network":"ws","ws-opts":{"path":"/date","headers":{"host":"vl.346492.xyz"}}}
+  - {"name":"vless_5","type":"vless","server":"139.177.186.99","port":443,"uuid":"15377cff-72be-45a8-d3ca-7abefa54da99","tls":true,"servername":"vl.346492.xyz","network":"ws","ws-opts":{"path":"/date","headers":{"host":"vl.346492.xyz"}}}
+  - {"name":"vless_6","type":"vless","server":"178.79.190.253","port":443,"uuid":"15377cff-72be-45a8-d3ca-7abefa54da99","tls":true,"servername":"vl.346492.xyz","network":"ws","ws-opts":{"path":"/date","headers":{"host":"vl.346492.xyz"}}}
+  - {"name":"vless_7","type":"vless","server":"167.99.73.50","port":443,"uuid":"15377cff-72be-45a8-d3ca-7abefa54da99","tls":true,"servername":"vl.346492.xyz","network":"ws","ws-opts":{"path":"/date","headers":{"host":"vl.346492.xyz"}}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -36,14 +45,32 @@ proxy-groups:
   - name: 🚀 手动切换
     type: select
     proxies:
-      - hysteria-ygkkk
+      - vless_1
+      - vless-clone
+      - vless-clone-clone
+      - vless-clone-clone-clone
+      - vless_2
+      - vless_3
+      - vless_4
+      - vless_5
+      - vless_6
+      - vless_7
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - hysteria-ygkkk
+      - vless_1
+      - vless-clone
+      - vless-clone-clone
+      - vless-clone-clone-clone
+      - vless_2
+      - vless_3
+      - vless_4
+      - vless_5
+      - vless_6
+      - vless_7
   - name: ChatGpt
     type: select
     proxies:
@@ -427,7 +454,16 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 180
     proxies:
-      - hysteria-ygkkk
+      - vless_1
+      - vless-clone
+      - vless-clone-clone
+      - vless-clone-clone-clone
+      - vless_2
+      - vless_3
+      - vless_4
+      - vless_5
+      - vless_6
+      - vless_7
 
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
